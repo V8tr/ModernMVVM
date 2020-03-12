@@ -12,9 +12,11 @@ struct ContentView: View {
     @State var username = ""
     @State var password = ""
     @State var repeatedPassword = ""
-    @State var usernameIsValid = false
-    @State var passwordIsValid = false
-    @State var repeatedPasswordIsValid = false
+    @State var usernameIsValid = true
+    @State var passwordIsValid = true
+    @State var repeatedPasswordIsValid = true
+    @State var isLoading = false
+    @State var isShowingError = false
     
     var body: some View {
         VStack(spacing: 10) {
@@ -33,7 +35,14 @@ struct ContentView: View {
             Button(action: self.onSignUp) { Text("Sign Up") }
             
             Button(action: self.onLogin) { Text("Already have an account") }
-        }.padding()
+        }
+        .padding()
+        .alert(isPresented: $isShowingError) {
+            Alert(
+                title: Text("Unexpected error occurred"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
     
     func onSignUp() {

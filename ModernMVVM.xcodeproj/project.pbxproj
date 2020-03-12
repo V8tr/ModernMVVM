@@ -13,6 +13,7 @@
 		80365CE1241A7CCE005B59B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80365CE0241A7CCE005B59B9 /* Assets.xcassets */; };
 		80365CE4241A7CCE005B59B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80365CE3241A7CCE005B59B9 /* Preview Assets.xcassets */; };
 		80365CE7241A7CCE005B59B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80365CE5241A7CCE005B59B9 /* LaunchScreen.storyboard */; };
+		80365CEF241A85A7005B59B9 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80365CEE241A85A7005B59B9 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		80365CE3241A7CCE005B59B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80365CE6241A7CCE005B59B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80365CE8241A7CCE005B59B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80365CEE241A85A7005B59B9 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				80365CDA241A7CCB005B59B9 /* AppDelegate.swift */,
 				80365CDC241A7CCB005B59B9 /* SceneDelegate.swift */,
 				80365CDE241A7CCB005B59B9 /* ContentView.swift */,
+				80365CEE241A85A7005B59B9 /* Spinner.swift */,
 				80365CE0241A7CCE005B59B9 /* Assets.xcassets */,
 				80365CE5241A7CCE005B59B9 /* LaunchScreen.storyboard */,
 				80365CE8241A7CCE005B59B9 /* Info.plist */,
@@ -149,6 +152,7 @@
 				80365CDB241A7CCB005B59B9 /* AppDelegate.swift in Sources */,
 				80365CDD241A7CCB005B59B9 /* SceneDelegate.swift in Sources */,
 				80365CDF241A7CCB005B59B9 /* ContentView.swift in Sources */,
+				80365CEF241A85A7005B59B9 /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
