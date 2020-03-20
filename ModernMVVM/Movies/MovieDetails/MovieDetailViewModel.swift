@@ -35,7 +35,11 @@ final class MovieDetailViewModel: ObservableObject {
     func send(event: Event) {
         input.send(event)
     }
-    
+}
+
+// MARK: - Inner Types
+
+extension MovieDetailViewModel {
     enum State {
         case idle(Int)
         case loading(Int)
@@ -79,7 +83,11 @@ final class MovieDetailViewModel: ObservableObject {
             language = movie.spoken_languages.first?.name ?? "N/A"
         }
     }
-    
+}
+
+// MARK: - State Machine
+
+extension MovieDetailViewModel {
     static func reduce(_ state: State, _ event: Event) -> State {
         switch state {
         case .idle(let id):

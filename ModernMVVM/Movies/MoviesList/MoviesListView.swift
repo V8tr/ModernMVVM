@@ -9,8 +9,6 @@
 import Combine
 import SwiftUI
 
-let cache = TemporaryImageCache()
-
 struct MoviesListView: View {
     @ObservedObject var viewModel: MoviesListViewModel
         
@@ -20,14 +18,11 @@ struct MoviesListView: View {
                 .navigationBarTitle("Trending Movies")
         }
         .onAppear { self.viewModel.send(event: .onAppear) }
-        .onDisappear { self.viewModel.send(event: .onDisappear) }
     }
     
     private var content: some View {
         switch viewModel.state {
         case .idle:
-            // SwiftUI will crash if EmptyView() is embedded into NavigationView.
-            // Hence, fallback to a clear background
             return Color.clear.eraseToAnyView()
         case .loading:
             return Spinner(isAnimating: true, style: .large).eraseToAnyView()
@@ -50,7 +45,8 @@ struct MoviesListView: View {
 
 struct MovieListItemView: View {
     let movie: MoviesListViewModel.ListItem
-    
+    @Environment(\.imageCache) var cache: ImageCache
+
     var body: some View {
         VStack {
             title
@@ -77,9 +73,7 @@ struct MovieListItemView: View {
         .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3) // 2:3 aspect ratio
     }
     
-    private var spinner: some View { Spinner(isAnimating: true, style: .medium) }
-}
-
-extension View {
-    func eraseToAnyView() -> AnyView { AnyView(self) }
+    private var spinner: some View {
+        Spinner(isAnimating: true, style: .medium)
+    }
 }

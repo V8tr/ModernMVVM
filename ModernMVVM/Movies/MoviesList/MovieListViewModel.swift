@@ -12,8 +12,6 @@ import Combine
 final class MoviesListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
     
-    let navigation = PassthroughSubject<Route, Never>()
-            
     private var bag = Set<AnyCancellable>()
     
     private let input = PassthroughSubject<Event, Never>()
@@ -30,17 +28,6 @@ final class MoviesListViewModel: ObservableObject {
         )
         .assign(to: \.state, on: self)
         .store(in: &bag)
-        
-//        $state.compactMap { state in
-//            switch state {
-//            case .showingMovieDetail(let movies, let selectedMovie):
-//                return Route(movieDetail: selectedMovie)
-//            default:
-//                return nil
-//            }
-//        }
-//        .subscribe(navigation)
-//        .store(in: &bag)
     }
     
     deinit {
@@ -50,25 +37,23 @@ final class MoviesListViewModel: ObservableObject {
     func send(event: Event) {
         input.send(event)
     }
-    
+}
+
+// MARK: - Inner Types
+
+extension MoviesListViewModel {
     enum State {
         case idle
         case loading
         case loaded([ListItem])
         case error(Error)
-//        case showingMovieDetail([MovieListItemViewModel], MovieDetailViewModel)
     }
     
     enum Event {
         case onAppear
-        case onDisappear
         case onSelectMovie(Int)
         case onMoviesLoaded([ListItem])
         case onFailedToLoadMovies(Error)
-    }
-    
-    struct Route {
-        let movieDetail: MovieDetailViewModel
     }
     
     struct ListItem: Identifiable {
@@ -82,7 +67,11 @@ final class MoviesListViewModel: ObservableObject {
             poster = movie.poster
         }
     }
-    
+}
+
+// MARK: - State Machine
+
+extension MoviesListViewModel {
     static func reduce(_ state: State, _ event: Event) -> State {
         switch state {
         case .idle:
@@ -102,21 +91,9 @@ final class MoviesListViewModel: ObservableObject {
                 return state
             }
         case .loaded:
-//            switch event {
-//            case .onSelectMovie(let id):
-//                return .showingMovieDetail(movies, MovieDetailViewModel(movieID: id))
-//            default:
-                return state
-//            }
+            return state
         case .error:
             return state
-//        case .showingMovieDetail(let movies, _):
-//            switch event {
-//            case .onDisappear:
-//                return .loaded(movies)
-//            default:
-//                return state
-//            }
         }
     }
     
@@ -133,8 +110,6 @@ final class MoviesListViewModel: ObservableObject {
     }
     
     static func userInput(input: AnyPublisher<Event, Never>) -> Feedback<State, Event> {
-        Feedback(run: { _ in
-            return input
-        })
+        Feedback { _ in input }
     }
 }

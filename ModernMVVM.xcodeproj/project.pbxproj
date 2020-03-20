@@ -23,6 +23,7 @@
 		88C9C24F2424BD7F004EB00E /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9C24B2424BD7F004EB00E /* MoviesListView.swift */; };
 		88C9C2512424BD86004EB00E /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9C2502424BD86004EB00E /* System.swift */; };
 		88C9C2532424BD8A004EB00E /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9C2522424BD8A004EB00E /* Feedback.swift */; };
+		88C9C2552424C197004EB00E /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9C2542424C197004EB00E /* View+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		88C9C24B2424BD7F004EB00E /* MoviesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
 		88C9C2502424BD86004EB00E /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		88C9C2522424BD8A004EB00E /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		88C9C2542424C197004EB00E /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				88C9C2452424BD7F004EB00E /* Movies */,
 				88C9C2302424BD5D004EB00E /* SupportingFIles */,
 				88C9C2502424BD86004EB00E /* System.swift */,
+				88C9C2542424C197004EB00E /* View+Ext.swift */,
 			);
 			path = ModernMVVM;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				88C9C2432424BD7C004EB00E /* ImageLoader.swift in Sources */,
 				88C9C2422424BD7C004EB00E /* ImageCache.swift in Sources */,
+				88C9C2552424C197004EB00E /* View+Ext.swift in Sources */,
 				88C9C2512424BD86004EB00E /* System.swift in Sources */,
 				88C9C2392424BD71004EB00E /* Agent.swift in Sources */,
 				88C9C24C2424BD7F004EB00E /* MovieDetailView.swift in Sources */,

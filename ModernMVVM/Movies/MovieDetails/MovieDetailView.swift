@@ -11,7 +11,8 @@ import Combine
 
 struct MovieDetailView: View {
     @ObservedObject var viewModel: MovieDetailViewModel
-    
+    @Environment(\.imageCache) var cache: ImageCache
+
     var body: some View {
         content
             .onAppear { self.viewModel.send(event: .onAppear) }
@@ -33,7 +34,7 @@ struct MovieDetailView: View {
     private func movie(_ movie: MovieDetailViewModel.MovieDetail) -> some View {
         ScrollView {
             VStack {
-                fullWidth
+                fillWidth
                 
                 Text(movie.title)
                     .font(.largeTitle)
@@ -67,7 +68,7 @@ struct MovieDetailView: View {
         }
     }
     
-    private var fullWidth: some View {
+    private var fillWidth: some View {
         HStack {
             Spacer()
         }
