@@ -1,8 +1,8 @@
 //
 //  Spinner.swift
-//  ModernMVVM
+//  AsyncImage
 //
-//  Created by Vadym Bulavin on 3/12/20.
+//  Created by Vadym Bulavin on 2/18/20.
 //  Copyright © 2020 Vadym Bulavin. All rights reserved.
 //
 
