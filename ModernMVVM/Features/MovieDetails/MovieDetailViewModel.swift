@@ -71,10 +71,10 @@ extension MovieDetailViewModel {
             poster = movie.poster
             rating = movie.vote_average
             
-            let f = DateComponentsFormatter()
-            f.unitsStyle = .abbreviated
-            f.allowedUnits = [.minute, .hour]
-            duration = movie.runtime.flatMap { f.string(from: TimeInterval($0 * 60)) } ?? "N/A"
+            let formatter = DateComponentsFormatter()
+            formatter.unitsStyle = .abbreviated
+            formatter.allowedUnits = [.minute, .hour]
+            duration = movie.runtime.flatMap { formatter.string(from: TimeInterval($0 * 60)) } ?? "N/A"
             
             genres = movie.genres.map(\.name)
             

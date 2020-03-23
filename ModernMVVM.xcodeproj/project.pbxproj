@@ -81,13 +81,29 @@
 				88C9C2362424BD71004EB00E /* API */,
 				88C9C2312424BD6C004EB00E /* App */,
 				88C9C23B2424BD7B004EB00E /* Controls */,
-				88C9C2522424BD8A004EB00E /* Feedback.swift */,
-				88C9C2452424BD7F004EB00E /* Movies */,
+				88B0A7D5242919E00045F8AB /* Extensions */,
+				88C9C2452424BD7F004EB00E /* Features */,
+				88B0A7D4242919C10045F8AB /* Feedback */,
 				88C9C2302424BD5D004EB00E /* SupportingFIles */,
-				88C9C2502424BD86004EB00E /* System.swift */,
-				88C9C2542424C197004EB00E /* View+Ext.swift */,
 			);
 			path = ModernMVVM;
+			sourceTree = "<group>";
+		};
+		88B0A7D4242919C10045F8AB /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				88C9C2522424BD8A004EB00E /* Feedback.swift */,
+				88C9C2502424BD86004EB00E /* System.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		88B0A7D5242919E00045F8AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88C9C2542424C197004EB00E /* View+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		88C9C2302424BD5D004EB00E /* SupportingFIles */ = {
@@ -137,13 +153,13 @@
 			path = AsyncImage;
 			sourceTree = "<group>";
 		};
-		88C9C2452424BD7F004EB00E /* Movies */ = {
+		88C9C2452424BD7F004EB00E /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				88C9C2462424BD7F004EB00E /* MovieDetails */,
 				88C9C2492424BD7F004EB00E /* MoviesList */,
 			);
-			path = Movies;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		88C9C2462424BD7F004EB00E /* MovieDetails */ = {
