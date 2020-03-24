@@ -1,6 +1,6 @@
 //
 //  System.swift
-//  AsyncImageList
+//  ModernMVVMList
 //
 //  Created by Vadim Bulavin on 3/17/20.
 //  Copyright © 2020 Vadym Bulavin. All rights reserved.

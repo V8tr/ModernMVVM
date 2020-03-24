@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  AsyncImage
+//  ModernMVVM
 //
 //  Created by Vadym Bulavin on 2/13/20.
 //  Copyright © 2020 Vadym Bulavin. All rights reserved.

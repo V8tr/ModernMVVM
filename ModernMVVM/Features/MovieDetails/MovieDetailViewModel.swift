@@ -1,6 +1,6 @@
 //
 //  MovieDetailViewModel.swift
-//  AsyncImageList
+//  ModernMVVMList
 //
 //  Created by Vadim Bulavin on 3/19/20.
 //  Copyright © 2020 Vadym Bulavin. All rights reserved.
